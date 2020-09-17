@@ -14,7 +14,7 @@ Repo for homework projects for autumn android school 2020
 3. Open Android Studio
 4. There are 2 ways to clone project from path:
 <br>
-    1) Цhen the studio is open, through the toolbar
+    1) When the studio is open, through the toolbar
     <br>
     <img src="https://github.com/erkhabibullina/Autumn-School/blob/master/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202020-09-17%20%D0%B2%2014.30.44.png" />
     <br>
