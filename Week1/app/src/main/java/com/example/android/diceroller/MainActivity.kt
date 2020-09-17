@@ -15,12 +15,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         // todo (05) Создайте и присвойте переменной rollButton значение Button с id = roll_button, используя функцию findViewById
 
-        // todo (10) Добавьте clickListener на эту кнопку и внутри вызовите функцию rollDice()
+        // todo (10) Добавьте clickListener на кнопку rollButton и внутри вызовите функцию rollDice()
 
         // todo (04) Присвойте переменной diceImage значение ImageView с id = dice_image, используя функцию findViewById
     }
 
-    // todo (06) Создайте приватную функцию rollDice. Задания 7-9 выполнить внутри тела функции rollDice()
+    // todo (06) Создайте функцию rollDice. Задания 7-9 выполнить внутри тела функции rollDice()
     // todo (07) Создайте переменную randomInt и присвойте ей значение Random().nextInt(6) + 1
     // todo (08) Создайте переменную drawableResource и присвойте ей значение when (randomInt) {
     //            1 -> R.drawable.dice_1
