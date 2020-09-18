@@ -41,11 +41,10 @@ Repo for homework projects for autumn android school 2020.
 - 9. Click on "commit and push" button<br><img src="https://github.com/erkhabibullina/Autumn-School/blob/master/img/Screenshot%202020-09-18%20at%2013.52.50.png" width="350" /><br><br>
 - 10. Click on "push" button<br><img src="https://github.com/erkhabibullina/Autumn-School/blob/master/img/Screenshot%202020-09-18%20at%2013.52.56.png" width="350" /><br><br>
 - 11. Then maybe Android Studio will ask you log in to your github account <br><img src="https://github.com/erkhabibullina/Autumn-School/blob/master/img/Screenshot%202020-09-18%20at%2013.53.04.png" width="350" /><br><br>
-- 11. Then go to github page, refresh it, and you will see changes <br><img src="https://github.com/erkhabibullina/Autumn-School/blob/master/img/Screenshot%202020-09-18%20at%2013.56.37.png" width="350" /><br><br>
-- 11. Then go to github page, refresh it, and you will see changes <br><img src="https://github.com/erkhabibullina/Autumn-School/blob/master/img/Screenshot%202020-09-18%20at%2013.56.37.png" width="350" /><br><br>
-- 12. Press on this tab <br><img src="https://github.com/erkhabibullina/Autumn-School/blob/master/img/Screenshot%202020-09-18%20at%2014.53.36.png" width="350" /><br><br>  
-- 13. Press on the branch, that you've created <br><img src="https://github.com/erkhabibullina/Autumn-School/blob/master/img/Screenshot%202020-09-18%20at%2014.54.12.png" width="350" /><br><br>  
-- 14. Press confirm button and you will see this tab, thats all, congrats! <br><img src="https://github.com/erkhabibullina/Autumn-School/blob/master/img/Screenshot%202020-09-18%20at%2014.58.16.png" width="350" /><br><br> 
+- 12. Then go to github page, refresh it, and you will see changes <br><img src="https://github.com/erkhabibullina/Autumn-School/blob/master/img/Screenshot%202020-09-18%20at%2013.56.37.png" width="350" /><br><br>
+- 13. Press on this tab <br><img src="https://github.com/erkhabibullina/Autumn-School/blob/master/img/Screenshot%202020-09-18%20at%2014.53.36.png" width="350" /><br><br>  
+- 14. Press on the branch, that you've created <br><img src="https://github.com/erkhabibullina/Autumn-School/blob/master/img/Screenshot%202020-09-18%20at%2014.54.12.png" width="350" /><br><br>  
+- 15. Press confirm button and you will see this tab, thats all, congrats! <br><img src="https://github.com/erkhabibullina/Autumn-School/blob/master/img/Screenshot%202020-09-18%20at%2014.58.16.png" width="350" /><br><br> 
     
 ## How to do a homework
 - 1. Open project<br><br>
