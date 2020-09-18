@@ -39,3 +39,5 @@ You can read the [official instructions](https://developer.android.com/studio/in
 - [Linux](https://developer.android.com/studio/videos/studio-install-linux.mp4)
 ### How to create android virtual device
 You can read [user guide](https://developer.android.com/studio/run/managing-avds?hl=en)
+### Our lessons
+- Week 1<br>[![Watch the video](https://img.youtube.com/vi/mzOjesV6hik&t=5180s&ab/maxresdefault.jpg)](https://www.youtube.com/watch?v=mzOjesV6hik&t=5180s&ab_channel=styleru)
