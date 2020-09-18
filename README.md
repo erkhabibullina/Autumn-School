@@ -3,6 +3,15 @@ Repo for homework projects for autumn android school 2020.
 <br>
 **Below you can find useful information that can help you with your homework**
 
+## Content
+1. [How to clone a project](https://github.com/erkhabibullina/Autumn-School#how-to-clone-a-project)
+2. [How to make pull request](https://github.com/erkhabibullina/Autumn-School#how-to-make-pull-request)
+3. [How to do a homework](https://github.com/erkhabibullina/Autumn-School#how-to-do-a-homework)
+4. [Some videos & links](https://github.com/erkhabibullina/Autumn-School#some-videos--links)
+    1. [How to install Android Studio](https://github.com/erkhabibullina/Autumn-School#how-to-install-android-studio)
+    2. [How to create android virtual device](https://github.com/erkhabibullina/Autumn-School#how-to-create-android-virtual-device)
+    3. [Our lessons](https://github.com/erkhabibullina/Autumn-School#our-lessons)
+    
 ## How to clone a project
 - 1. Press clone button<br><img src="https://github.com/erkhabibullina/Autumn-School/blob/master/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202020-09-17%20%D0%B2%2014.29.34.png" width="350"/><br><br>
 - 2. Copy project path<br><img src="https://github.com/erkhabibullina/Autumn-School/blob/master/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202020-09-17%20%D0%B2%2014.29.57.png" width="350" /><br><br>
