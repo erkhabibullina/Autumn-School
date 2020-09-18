@@ -11,5 +11,5 @@ Dice Roller is a simple app that rolls a six sided die.
 
 ![Screenshot1](screenshots/screen0.png) ![Screenshot1](screenshots/screen1.png)
 
-
-`This app is from udacity course`
+<br><br>
+*This app is from [udacity course](https://classroom.udacity.com/courses/ud9012)*
