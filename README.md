@@ -33,5 +33,9 @@ Repo for homework projects for autumn android school 2020
 
 ## Some videos & links
 ### How to install Android Studio
-You can read the [official instructions](https://developer.android.com/studio/install) or watch the video:
-- Mac<br>[![Watch the video]](https://developer.android.com/studio/videos/studio-install-windows.mp4)
+You can read the [official instructions](https://developer.android.com/studio/install) or watch the video from the official documentation:
+- [Windows](https://developer.android.com/studio/videos/studio-install-windows.mp4)
+- [Mac](https://developer.android.com/studio/videos/studio-install-mac.mp4)
+- [Linux](https://developer.android.com/studio/videos/studio-install-linux.mp4)
+### How to create android virtual device
+You can read [user guide](https://developer.android.com/studio/run/managing-avds?hl=en)
