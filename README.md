@@ -40,4 +40,4 @@ You can read the [official instructions](https://developer.android.com/studio/in
 ### How to create android virtual device
 You can read [user guide](https://developer.android.com/studio/run/managing-avds?hl=en)
 ### Our lessons
-- Week 1<br>[![Watch the video](https://img.youtube.com/vi/mzOjesV6hik/sddefault.jpg)](https://www.youtube.com/watch?v=mzOjesV6hik&t=5180s&ab_channel=styleru)
+- **Week 1**<br><br>[![Watch the video](https://img.youtube.com/vi/mzOjesV6hik/sddefault.jpg)](https://www.youtube.com/watch?v=mzOjesV6hik&t=5180s&ab_channel=styleru)
