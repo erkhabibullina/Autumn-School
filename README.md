@@ -17,8 +17,7 @@ Repo for homework projects for autumn android school 2020
 ***DONE!***
 <br>
 <br>
-## How to do a homework<br>
-When you've cloned a project, you're ready to do your homework.<br>
+## How to do a homework
 - Open project<br><br>
 - Open "TODO" tab<br><img src="https://github.com/erkhabibullina/Autumn-School/blob/master/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202020-09-18%20%D0%B2%2011.11.46.png" width="350" /><br><br>
 - You can see all todo's here. Todo is something to help you do your homework. Here it is described in detail what needs to be written in the code. If something remains unclear or you want to test yourself, you can review the lesson.<img src="https://github.com/erkhabibullina/Autumn-School/blob/master/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202020-09-18%20%D0%B2%2011.13.31.png" width="350" /><br><br>
