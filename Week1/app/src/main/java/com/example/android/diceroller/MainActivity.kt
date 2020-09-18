@@ -14,6 +14,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
 
+
+
         setContentView(R.layout.activity_main)
         // todo (05) Создайте и присвойте переменной rollButton значение Button с id = roll_button, используя функцию findViewById
 
