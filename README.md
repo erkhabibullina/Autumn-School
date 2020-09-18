@@ -34,6 +34,8 @@ Repo for homework projects for autumn android school 2020.
 - 2. Choose "New Branch"<br><img src="https://github.com/erkhabibullina/Autumn-School/blob/master/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202020-09-18%20%D0%B2%2011.50.01.png" width="350" /><br><br>
 - 3. Now there is a window in front of you. You can write name of your branch. In general, when you work in projects, you will need to remember the rules for writing the branch name. We also have such rules. Your branch should be called as w`<number of week>`/hw_`<your name>`_`<your surname>` where `<number of week>` is number of homework in our course `<your name>` is your name (e.g. elina or Elina), `<your surname>` is your surname (e.g. kim or Kim). After writing the name of the branch, press create<br><img src="https://github.com/erkhabibullina/Autumn-School/blob/master/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202020-09-18%20%D0%B2%2011.39.07.png" width="350" /><br><br>
 - 4. If everything went well, you will see such a message in the lower left corner:<br><img src="https://github.com/erkhabibullina/Autumn-School/blob/master/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202020-09-18%20%D0%B2%2011.39.50.png" width="350" />
+- 5. You must have a github account to make a pull request. After you create account, write your username or email to VK chat. We will invite you to the project. Accept my invitation and then you can make pull requests<br><img src="" width="350" />
+- 6. 
     
 ## How to do a homework
 - 1. Open project<br><br>
