@@ -15,8 +15,6 @@ Repo for homework projects for autumn android school 2020
 <img src="https://github.com/erkhabibullina/Autumn-School/blob/master/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202020-09-17%20%D0%B2%2014.35.36.png" width="350" /><br><br>
 - 8. Now you see the project and many folders<br><img src="https://github.com/erkhabibullina/Autumn-School/blob/master/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202020-09-17%20%D0%B2%2014.38.00.png" width="350" /><br><br>To open a project for a specific week:<br>Open "File":<br><img src="https://github.com/erkhabibullina/Autumn-School/blob/master/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202020-09-17%20%D0%B2%2014.38.23.png" width="350" /><br><br>Press "Open":<br><img src="https://github.com/erkhabibullina/Autumn-School/blob/master/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202020-09-17%20%D0%B2%2014.38.41.png" width="350" /><br><br>Open folder:<br><img src="https://github.com/erkhabibullina/Autumn-School/blob/master/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202020-09-17%20%D0%B2%2014.38.56.png" width="350" /><br><br>
 ***DONE!***
-<br>
-<br>
 ## How to do a homework
 - 1. Open project<br><br>
 - 2. Open "TODO" tab<br><img src="https://github.com/erkhabibullina/Autumn-School/blob/master/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202020-09-18%20%D0%B2%2011.11.46.png" width="350" /><br><br>
