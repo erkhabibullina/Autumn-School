@@ -52,6 +52,7 @@ Repo for homework projects for autumn android school 2020.
 - 3. You can see all todo's here. Todo is something to help you do your homework. Here it is described in detail what needs to be written in the code. If something remains unclear or you want to test yourself, you can review the lesson<br><img src="https://github.com/erkhabibullina/Autumn-School/blob/master/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202020-09-18%20%D0%B2%2011.13.31.png" width="350" /><br><br>
 - 4. In order not to search for todo in files, you can click on the desired todo and go to it.<br><img src="https://github.com/erkhabibullina/Autumn-School/blob/master/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202020-09-18%20%D0%B2%2011.13.41.png" width="350" /><br><img src="https://github.com/erkhabibullina/Autumn-School/blob/master/img/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202020-09-18%20%D0%B2%2011.14.06.png" width="350" /><br><br>
 - 5. Read the todo carefully and follow it
+- 6. Don't forget to make a pull request!
 
 ## Some videos & links
 ### How to install Android Studio
