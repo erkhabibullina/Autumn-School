@@ -13,15 +13,15 @@
     <ImageView
         android:id="@+id/dice_image"
         android:layout_width="wrap_content"
-        android:layout_height="183dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         app:srcCompat="@drawable/empty_dice" />
 
     <!-- todo (02) Добавьте Button с id="+id/roll_button", layout_width="wrap_content", layout_height="wrap_content", layout_gravity="center_horizontal", text="@string/roll" -->
     <Button
         android:id="@+id/roll_button"
-        android:layout_width="258dp"
-        android:layout_height="74dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="@string/roll" />
 </LinearLayout>
