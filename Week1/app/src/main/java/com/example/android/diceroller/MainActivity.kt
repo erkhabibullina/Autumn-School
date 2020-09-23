@@ -31,25 +31,15 @@ class MainActivity : AppCompatActivity() {
     fun rollDice() {
         val randomInt = Random().nextInt(6) + 1
         val drawableResource = when (randomInt) {
-                        1 -> R.drawable.dice_1
-                        2 -> R.drawable.dice_2
-                        3 -> R.drawable.dice_3
-                        4 -> R.drawable.dice_4
-                        5 -> R.drawable.dice_5
-                        else -> R.drawable.dice_6
+            1 -> R.drawable.dice_1
+            2 -> R.drawable.dice_2
+            3 -> R.drawable.dice_3
+            4 -> R.drawable.dice_4
+            5 -> R.drawable.dice_5
+            else -> R.drawable.dice_6
 
         }
         diceImage.setImageResource(drawableResource)
     }
 
-    // todo (07) Создайте переменную randomInt и присвойте ей значение
-    // todo (08) Создайте переменную drawableResource и присвойте ей значение when (randomInt) {
-    //            1 -> R.drawable.dice_1
-    //            2 -> R.drawable.dice_2
-    //            3 -> R.drawable.dice_3
-    //            4 -> R.drawable.dice_4
-    //            5 -> R.drawable.dice_5
-    //            else -> R.drawable.dice_6
-    //        }
-    // todo (09) Поставьте в diceImage полученный drawableResource с помощью функции setImageResource
 }
