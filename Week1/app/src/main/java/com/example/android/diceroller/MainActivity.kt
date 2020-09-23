@@ -26,8 +26,6 @@ class MainActivity : AppCompatActivity() {
         // todo (04) Присвойте переменной diceImage значение ImageView с id = dice_image, используя функцию findViewById
         diceImage = findViewById(R.id.dice_image)
     }
-
-    // todo (06) Создайте функцию rollDice. Задания 7-9 выполнить внутри тела функции rollDice()
     fun rollDice() {
         val randomInt = Random().nextInt(6) + 1
         val drawableResource = when (randomInt) {
