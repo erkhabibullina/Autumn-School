@@ -16,7 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        app:srcCompat = "@drawable/empty_dice"/>
+        app:srcCompat="@drawable/empty_dice"/>
     <!-- todo (02) Добавьте Button с id="@+id/roll_button", layout_width="wrap_content", layout_height="wrap_content", layout_gravity="center_horizontal", text="@string/roll" -->
     <Button
         android:id="@+id/roll_button"
