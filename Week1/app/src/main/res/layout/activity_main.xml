@@ -17,7 +17,7 @@
         android:layout_gravity="center_horizontal"
         app:srcCompat="@drawable/empty_dice"
         tools:ignore="ContentDescription" />
-    <!-- добавила, т.к. возникала ошибка Missing `contentDescription` attribute on image -->
+    <!-- добавила, т.к. возникала ошибка Missing `contentDescription` attribute on image  -->
 
     <!-- todo (02) Добавьте Button с id="@+id/roll_button", layout_width="wrap_content", layout_height="wrap_content", layout_gravity="center_horizontal", text="@string/roll" -->
     <Button
