@@ -1,9 +1,10 @@
 package com.example.android.diceroller
 
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import java.util.*
+import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         // todo (05) Создайте и присвойте переменной rollButton значение Button с id = roll_button, используя функцию findViewById
-        val rollButton : findViewById(R.id.roll_button)
+        val rollButton: Button = findViewById(R.id.roll_button)
         // todo (10) Добавьте clickListener на кнопку rollButton и внутри вызовите функцию rollDice()
         rollButton.setOnClickListener{
             rollDice()
@@ -24,7 +25,7 @@ class MainActivity : AppCompatActivity() {
 
     // todo (06) Создайте функцию rollDice. Задания 7-9 выполнить внутри тела функции rollDice()
     fun rollDice() {
-        val randomInt = Random().nextInt(6)+1
+        val randomInt = Random.nextInt(6) + 1
         val drawableResource = when (randomInt){
             1 -> R.drawable.dice_1
             2 -> R.drawable.dice_2
