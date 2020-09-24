@@ -8,6 +8,7 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
+
     // todo (03) Создайте переменную diceImage типа ImageView с отложенной инициализацией
     lateinit var diceImage: ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
