@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         // todo (05) Создайте и присвойте переменной rollButton значение Button с id = roll_button, используя функцию findViewById
-        var rollButton: Button = findViewById(R.id.roll_button)
+        val rollButton: Button = findViewById(R.id.roll_button)
         // todo (10) Добавьте clickListener на кнопку rollButton и внутри вызовите функцию rollDice()
         rollButton.setOnClickListener{
             rollDice()
