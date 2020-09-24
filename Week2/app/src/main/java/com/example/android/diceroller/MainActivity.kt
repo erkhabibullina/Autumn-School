@@ -6,10 +6,10 @@ import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import kotlin.random.Random
 
-// todo Создайте класс MainActivity, который будет расширять класс AppCompatActivity()
+// todo (08) Создайте класс MainActivity, который будет расширять класс AppCompatActivity()
 lateinit var diceImage: ImageView
 
-// todo добавьте модификатор переписывания к функции onCreate()
+// todo (09) добавьте модификатор переписывания к функции onCreate()
 fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main)
