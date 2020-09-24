@@ -9,7 +9,7 @@ import java.util.*
 class MainActivity : AppCompatActivity() {
 
     // todo (03) Создайте переменную diceImage типа ImageView с отложенной инициализацией
-
+//
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
