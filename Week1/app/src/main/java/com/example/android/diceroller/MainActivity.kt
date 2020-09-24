@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
     //Done todo (06) Создайте функцию rollDice. Задания 7-9 выполнить внутри тела функции rollDice()
     fun rollDice(){
         //Warning  todo (07) Создайте переменную randomInt и присвойте ей значение Random().nextInt(6) + 1
-        val randomInt : Int = kotlin.random.Random.nextInt(5) + 1;
+        val randomInt : Int = kotlin.random.Random.nextInt(6) + 1;
             //Done todo (08) Создайте переменную drawableResource и присвойте ей значение when (randomInt) {
             val drawableResource = when(randomInt){
                 1 -> R.drawable.dice_1
