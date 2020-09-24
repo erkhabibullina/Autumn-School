@@ -24,27 +24,27 @@ class MainActivity : AppCompatActivity() {
     }
 
     // todo (06) Создайте функцию rollDice. Задания 7-9 выполнить внутри тела функции rollDice()
-    fun rollDice(){
-        // todo (07) Создайте переменную randomInt и присвойте ей значение Random().nextInt(6) + 1
-        val randomInt = Random().nextInt(6) + 1
-        // todo (08) Создайте переменную drawableResource и присвойте ей значение when (randomInt) {
-        //            1 -> R.drawable.dice_1
-        //            2 -> R.drawable.dice_2
-        //            3 -> R.drawable.dice_3
-        //            4 -> R.drawable.dice_4
-        //            5 -> R.drawable.dice_5
-        //            else -> R.drawable.dice_6
-        //        }
-        val drawableResource = when (randomInt) {
-                        1 -> R.drawable.dice_1
-                        2 -> R.drawable.dice_2
-                        3 -> R.drawable.dice_3
-                        4 -> R.drawable.dice_4
-                        5 -> R.drawable.dice_5
-                        else -> R.drawable.dice_6
-                    }
-        // todo (09) Поставьте в diceImage полученный drawableResource с помощью функции setImageResource
+    fun rollDice() {
+        val randomInt = Random().nextInt(6)+1
+        val drawableResource = when (randomInt){
+            1 -> R.drawable.dice_1
+            2 -> R.drawable.dice_2
+            3 -> R.drawable.dice_3
+            4 -> R.drawable.dice_4
+            5 -> R.drawable.dice_5
+            else  -> R.drawable.dice_6
+        }
         diceImage.setImageResource(drawableResource)
     }
+    // todo (07) Создайте переменную randomInt и присвойте ей значение Random().nextInt(6) + 1
+    // todo (08) Создайте переменную drawableResource и присвойте ей значение when (randomInt) {
+    //            1 -> R.drawable.dice_1
+    //            2 -> R.drawable.dice_2
+    //            3 -> R.drawable.dice_3
+    //            4 -> R.drawable.dice_4
+    //            5 -> R.drawable.dice_5
+    //            else -> R.drawable.dice_6
+    //        }
+    // todo (09) Поставьте в diceImage полученный drawableResource с помощью функции setImageResource
 
 }
