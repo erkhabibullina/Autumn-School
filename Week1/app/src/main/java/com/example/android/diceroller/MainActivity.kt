@@ -1,26 +1,48 @@
 package com.example.android.diceroller
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.test1.R
+import com.example.test1.R.*
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
     // todo (03) Создайте переменную diceImage типа ImageView с отложенной инициализацией
+    lateinit var diceImage : ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(layout.activity_main)
+        Log.i("MAIN ACTIVITY", "onCreate called")
+
         // todo (05) Создайте и присвойте переменной rollButton значение Button с id = roll_button, используя функцию findViewById
-
+        val rollButton : Button = findViewById(id.roll_button)
         // todo (10) Добавьте clickListener на кнопку rollButton и внутри вызовите функцию rollDice()
-
+        rollButton.setOnClickListener {
+            rollDice()
+        }
         // todo (04) Присвойте переменной diceImage значение ImageView с id = dice_image, используя функцию findViewById
+        diceImage = findViewById(id.dice_image)
+
     }
 
     // todo (06) Создайте функцию rollDice. Задания 7-9 выполнить внутри тела функции rollDice()
+    fun rollDice() {
+        val randomInt = Random().nextInt(6) + 1
+        val drawableResource = when (randomInt) {
+            1 -> drawable.dice_1
+            2 -> drawable.dice_2
+            3 -> drawable.dice_3
+            4 -> drawable.dice_4
+            5 -> drawable.dice_5
+            else -> drawable.dice_6
+        }
+        diceImage.setImageResource(drawableResource)
+    }
     // todo (07) Создайте переменную randomInt и присвойте ей значение Random().nextInt(6) + 1
     // todo (08) Создайте переменную drawableResource и присвойте ей значение when (randomInt) {
     //            1 -> R.drawable.dice_1
