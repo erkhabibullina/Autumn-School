@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:layout_gravity="center_vertical"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    app:context=".MainActivity">
 
     <!--Done todo (01) Добавьте ImageView с id="@+id/dice_image",
     layout_width="wrap_content", layout_height="wrap_content",
@@ -18,7 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        tools:srcCompat="@drawable/empty_dice" />
+        app:srcCompat="@drawable/empty_dice" />
 
     <!--Done todo (02) Добавьте Button с id="@+id/roll_button", layout_width="wrap_content", layout_height="wrap_content", layout_gravity="center_horizontal", text="@string/roll" -->
 
