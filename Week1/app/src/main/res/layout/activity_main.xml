@@ -3,9 +3,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_gravity="center_vertical"
+    android:id="@+id/dice_image"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -27,4 +28,15 @@
         android:layout_gravity="center_horizontal"
         android:text="@string/roll"/>
 
+    <ImageView
+        android:id="@+id/dice_image"
+        android:layout_width="438dp"
+        android:layout_height="409dp"
+        app:srcCompat="@drawable/dice_1" />
+
+    <Button
+        android:id="@+id/roll_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/roll" />
 </LinearLayout>
