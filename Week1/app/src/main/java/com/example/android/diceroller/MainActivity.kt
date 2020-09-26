@@ -8,7 +8,6 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
-
     lateinit var diceImage: ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,13 +15,12 @@ class MainActivity : AppCompatActivity() {
 
         val rollButton: Button = findViewById(R.id.roll_button)
 
-    rollButton.setOnClickListener{
-        rollDice()
-    }
+        rollButton.setOnClickListener {
+            rollDice()
+        }
 
         diceImage = findViewById(R.id.dice_image)
     }
-
 
     fun rollDice() {
         val randomInt = Random().nextInt(6) + 1
@@ -36,5 +34,4 @@ class MainActivity : AppCompatActivity() {
         }
         diceImage.setImageResource(drawableResource)
     }
-
 }
