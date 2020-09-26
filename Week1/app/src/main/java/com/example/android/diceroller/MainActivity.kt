@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        // todo (05) Создайте и присвойте переменной rollButton значение Button с id = roll_button, используя функцию findViewById
+
         val rollButton: Button = findViewById(R.id.roll_button)
         rollButton.setOnClickListener{
             rollDice()
