@@ -24,25 +24,17 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-        setListeners()
-    }
+    // todo наследуйте и перепишите функцию onCreate
+    // todo соедините layout (activity_main.xml) с классом activity (MainActivity)
+    // todo добавьте listeners для всех View вашего лэйаута
 
     /**
      * Attaches listeners to all the views.
      */
     private fun setListeners() {
-        val clickableViews: List<View> =
-                listOf(box_one_text, box_two_text, box_three_text,
-                        box_four_text, box_five_text, constraint_layout,
-                        red_button, green_button, yellow_button)
+        // todo создайте переменную, в которой будет храниться список всех View из @layout/activity_main (их должно быть 9)
 
-        for (item in clickableViews) {
-            item.setOnClickListener { makeColored(it) }
-        }
+        // todo используя цикл, для всех View в clickableViews назначьте listener, такой, чтобы View меняла цвет при нажатии на неё
     }
 
     /**
@@ -54,24 +46,16 @@ class MainActivity : AppCompatActivity() {
      *     * Using an Android color resource
      *     * Using a custom color defined in color.xml
      */
-    private fun makeColored(view: View) {
-        when (view.id) {
+    // todo добавьте параметр view типа View для makeColored()
+    private fun makeColored() {
+        // todo добавьте блок when, в котором мы поставим бекграунды для View в зависимости от её id
 
-        // Boxes using Color class colors for background
-            R.id.box_one_text -> view.setBackgroundColor(Color.DKGRAY)
-            R.id.box_two_text -> view.setBackgroundColor(Color.GRAY)
+        // todo поставьте box_one_text и box_two_text бекграунды соответственно тёмно-серого и серого цвета, используя класс Color
 
-        // Boxes using Android color resources for background
-            R.id.box_three_text -> view.setBackgroundResource(android.R.color.holo_green_light)
-            R.id.box_four_text -> view.setBackgroundResource(android.R.color.holo_green_dark)
-            R.id.box_five_text -> view.setBackgroundResource(android.R.color.holo_green_light)
+        // todo поставьте box_three_text, box_four_text и box_five_text бекграунды соответственно holo_green_light, holo_green_dark и holo_green_light, используя Android color resources
 
-        // Boxes using custom colors for background
-            R.id.red_button -> box_three_text.setBackgroundResource(R.color.my_red)
-            R.id.yellow_button -> box_four_text.setBackgroundResource(R.color.my_yellow)
-            R.id.green_button -> box_five_text.setBackgroundResource(R.color.my_green)
+        // todo поставьте red_button, yellow_button и green_button бекграунды соответственно красного, жёлтого и зелёного цвета, используя цвета, которые вы добавили самостоятельно
 
-            else -> view.setBackgroundColor(Color.LTGRAY)
-        }
+        // todo если View id не подходит под значения выше, у View должен быть бекграунд Color.LTGRAY
     }
 }
