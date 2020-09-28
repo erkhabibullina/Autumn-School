@@ -8,17 +8,17 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    // todo наследуйте и перепишите функцию onCreate
-    // todo соедините layout (activity_main.xml) с классом activity (MainActivity)
-    // todo добавьте listeners для всех View вашего лэйаута
+    // todo (08) наследуйте и перепишите функцию onCreate
+    // todo (09) соедините layout (activity_main.xml) с классом activity (MainActivity)
+    // todo (10) добавьте listeners для всех View вашего лэйаута
 
     /**
      * Attaches listeners to all the views.
      */
     private fun setListeners() {
-        // todo создайте переменную, в которой будет храниться список всех View из @layout/activity_main (их должно быть 9)
+        // todo (11) создайте переменную, в которой будет храниться список всех View из @layout/activity_main (их должно быть 9)
 
-        // todo используя цикл, для всех View в clickableViews назначьте listener, такой, чтобы View меняла цвет при нажатии на неё
+        // todo (12) используя цикл, для всех View в clickableViews назначьте listener, такой, чтобы View меняла цвет при нажатии на неё
     }
 
     /**
@@ -30,16 +30,16 @@ class MainActivity : AppCompatActivity() {
      *     * Using an Android color resource
      *     * Using a custom color defined in color.xml
      */
-    // todo добавьте параметр view типа View для makeColored()
+    // todo (13) добавьте параметр view типа View для makeColored()
     private fun makeColored() {
-        // todo добавьте блок when, в котором мы поставим бекграунды для View в зависимости от её id
+        // todo (14) добавьте блок when, в котором мы поставим бекграунды для View в зависимости от её id
 
-            // todo поставьте box_one_text и box_two_text бекграунды соответственно тёмно-серого и серого цвета, используя класс Color
+            // todo (15) поставьте box_one_text и box_two_text бекграунды соответственно тёмно-серого и серого цвета, используя класс Color
 
-        // todo поставьте box_three_text, box_four_text и box_five_text бекграунды соответственно holo_green_light, holo_green_dark и holo_green_light, используя Android color resources
+        // todo (16) поставьте box_three_text, box_four_text и box_five_text бекграунды соответственно holo_green_light, holo_green_dark и holo_green_light, используя Android color resources
 
-        // todo поставьте red_button, yellow_button и green_button бекграунды соответственно красного, жёлтого и зелёного цвета, используя цвета, которые вы добавили самостоятельно
+        // todo (17) поставьте red_button, yellow_button и green_button бекграунды соответственно красного, жёлтого и зелёного цвета, используя цвета, которые вы добавили самостоятельно
 
-        // todo если View id не подходит под значения выше, у View должен быть бекграунд Color.LTGRAY
+        // todo (18) если View id не подходит под значения выше, у View должен быть бекграунд Color.LTGRAY
     }
 }
