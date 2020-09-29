@@ -7,32 +7,24 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
-
-    lateinit var diceImage: ImageView
-
+    private lateinit var diceImage2: ImageView
+    lateinit var diceImage1: ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val rollButton: Button = findViewById(R.id.roll_button)
-
-        rollButton.setOnClickListener {
-            rollDice()
+        val rollButton1: Button = findViewById(R.id.roll_button1)
+        val rollButton2: Button = findViewById(R.id.roll_button2)
+        rollButton1.setOnClickListener {
+            rollDice(diceImage1)
         }
-
-        diceImage = findViewById(R.id.dice_image)
-    }
-
-    private fun rollDice() {
-        val randomInt = Random.nextInt(6) + 1
-        val drawableResource = when (randomInt) {
-            1 -> R.drawable.dice_1
-            2 -> R.drawable.dice_2
-            3 -> R.drawable.dice_3
-            4 -> R.drawable.dice_4
-            5 -> R.drawable.dice_5
-            else -> R.drawable.dice_6
+        rollButton2.setOnClickListener {
+            rollDice(diceImage1)
+            rollDice(diceImage2)
         }
-        diceImage.setImageResource(drawableResource)
+        diceImage1 = findViewById(R.id.dice_image1)
+        diceImage2 = findViewById(R.id.dice_image2)
     }
 }
+
+

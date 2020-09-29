@@ -10,17 +10,30 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/dice_image"
+        android:id="@+id/dice_image1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         app:srcCompat="@drawable/empty_dice" />
 
     <Button
-        android:id="@+id/roll_button"
+        android:id="@+id/roll_button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="@string/roll" />
+        android:text="@string/roll1" />
+    <ImageView
+        android:id="@+id/dice_image2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:srcCompat="@drawable/empty_dice" />
+
+    <Button
+        android:id="@+id/roll_button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/roll2" />
 
 </LinearLayout>
