@@ -2,7 +2,6 @@ apply plugin: 'com.android.application'
 
 // todo подключить котлиновские плагины apply plugin: 'kotlin-android' и apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
 android {
     //todo установить версию приложения, на котором будут собиратся все билды
