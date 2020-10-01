@@ -1,16 +1,20 @@
-apply plugin: 'com.android.application'
+    apply plugin: 'com.android.application'
 
 // todo подключить котлиновские плагины apply plugin: 'kotlin-android' и apply plugin: 'kotlin-android-extensions'
-
+    apply plugin: 'kotlin-android'
+    apply plugin: 'kotlin-android-extensions'
 android {
     //todo установить версию приложения, на котором будут собиратся все билды
-
+    compileSdkVersion 30
     defaultConfig {
         applicationId "com.example.android.diceroller"
         // todo установить минимальную и максимальную версии приложения
+        minSdkVersion 23
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
         // todo подключить vectorDrawables.useSupportLibrary для того, чтобы можно было использовать app:srcCompat
     }
     buildTypes {
@@ -23,7 +27,8 @@ android {
 
 dependencies {
     // todo подключить котлиновские библиотеки implementation 'androidx.core:core-ktx:1.3.1' и  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
