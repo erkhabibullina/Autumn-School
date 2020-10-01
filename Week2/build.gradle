@@ -1,11 +1,13 @@
 buildscript {
     // todo указать версию котлина в переменной ext.kotlin_version
+    ext.kotlin_version = "1.4.10"
     repositories {
         google()
         jcenter()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:4.0.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         // todo подключить котлиновский плагин classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
         // NOTE: Do not place your application dependencies here; they belong
