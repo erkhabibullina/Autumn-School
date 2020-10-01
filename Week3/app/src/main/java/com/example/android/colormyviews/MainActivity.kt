@@ -25,6 +25,8 @@ class MainActivity : AppCompatActivity() {
                 red_button, green_button, yellow_button)
         for (item in clickableViews) {
             item.setOnClickListener { makeColored(it) }
+
+
         }
     }
 
