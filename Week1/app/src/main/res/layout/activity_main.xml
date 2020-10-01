@@ -9,18 +9,8 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-<ImageView
-    id="@+id/dice_image"
-    layout_width="wrap_content"
-    layout_height="wrap_content"
-    layout_gravity="center_horizontal"
-    srcCompat="@drawable/empty_dice" />
     <!-- todo (01) Добавьте ImageView с id="@+id/dice_image", layout_width="wrap_content", layout_height="wrap_content", layout_gravity="center_horizontal", srcCompat="@drawable/empty_dice" -->
-<Button
-    id="@+id/roll_button"
-    layout_width="wrap_content"
-    layout_height="wrap_content"
-    layout_gravity="center_horizontal"
-    text="@string/roll" />
+
     <!-- todo (02) Добавьте Button с id="@+id/roll_button", layout_width="wrap_content", layout_height="wrap_content", layout_gravity="center_horizontal", text="@string/roll" -->
+
 </LinearLayout>
