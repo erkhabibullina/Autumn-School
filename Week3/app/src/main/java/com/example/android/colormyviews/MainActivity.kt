@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setListeners()
     }
+
     private fun setListeners() {
 
         val clickableViews : List<View> = listOf(box_one_text, box_two_text,box_three_text, box_four_text,box_five_text,constraint_layout,
