@@ -10,5 +10,5 @@
     <string name="button_red">night</string>
     <string name="button_yellow">week</string>
     <string name="button_green">mounth</string>
-    <string name="dd">Deadline</string>
+    <string name="dd">Deadline after</string>
 </resources>
