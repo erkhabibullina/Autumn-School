@@ -5,21 +5,167 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/constraint_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
-    <!-- todo (01) сделать папку font, и добавить туда шрифт roboto -->
+    <TextView
+        android:id="@+id/box_one_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/white"
+        android:fontFamily="roboto"
+        android:gravity="center"
+        android:text="Box one"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- todo (02) сделать TextView с id=box_one_text, чтобы она занимала всю длину, и чтобы высота у нее была wrap_content, с отступами сверху/слева/справа по 16dp, на ней был текст "Box one", чтобы у нее был белый бэкграунд и белый цвет текста, размер текста 24sp, шрифт был roboto, сделать его "жирным", и чтобы текст был по центру. Текст должен быть "Box one". -->
+    <TextView
+        android:id="@+id/box_two_text"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/white"
+        android:fontFamily="roboto"
+        android:gravity="center"
+        android:text="Box two"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- todo (03) сделать TextView с id=box_two_text, с белым бэкграундом и белым цветом текста, с размером текста равным 24sp, сделать его жирным и применить шрифт roboto, и чтобы текст был по центру. Так же у него должен быть квадратный вид со стороной в 130dp, и с отступами сверху/слева/справа по 16dp, и чтобы он распологался точно под box_one_text TextView и точно над текстом с id=label_text, который мы добавим позже. Текст должен быть "Box two"-->
+    <TextView
+        android:id="@+id/box_three_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/white"
+        android:fontFamily="roboto"
+        android:gravity="center"
+        android:text="Box three"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/box_four_text"
+        app:layout_constraintTop_toTopOf="@id/box_two_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/box_two_text" />
 
-    <!-- todo (04) сделать три TextView с id=box_three_text, id=box_four_text, id=box_five_text, с текстами соответсвенно Box Three, Box Four, Box Five, с белым бэкграундом и белым цветом текста, с размером текста равным 24sp, сделать их жирными и применить шрифт roboto, и чтобы текст был по центру. Так же они должны занимать всю длину, а высота wrap_content, с отступами слева и справа по 16dp. Они должны иметь одинаковую длину, и располагаться друг под другом, и низ самой нижней должен быть на одном уровне с низом box_two_text, а верх верхнего так же с верхом box_two_text.  -->
+    <TextView
+        android:id="@+id/box_four_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/white"
+        android:fontFamily="roboto"
+        android:gravity="center"
+        android:text="Box four"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/box_five_text"
+        app:layout_constraintTop_toTopOf="@id/box_three_text" />
 
-    <!-- todo (05) Сделать TextView с id=label_text, у которой длина и высота будут wrap_content, отступ слева 16dp, шрифт - робото, размер текста - 24sp, чтоб он был жирным, и чтобы у нее была привязка к низу вьюшки с id=info_text. С текстом "This is a game:" -->
+    <TextView
+        android:id="@+id/box_five_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/white"
+        android:fontFamily="roboto"
+        android:gravity="center"
+        android:text="Box five"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/box_two_text"/>
 
-    <!-- todo (06) Сделать TextView с id=info_text. С высотой и шириной wrap_content, с отступами слева/сверху/снизу/справа равными 16/8/8/16 dp соответсвенно. Шрифт - roboto, текст - "Tap the screen and buttons". Его низ должен быть привязан к низу родителя, правый конец к правому концу родителя, левый конец к правому концу label_text, верх к низу box_two_text, вертикальное смещение - 12%, горизонтальное смещение - 100%  -->
+    <TextView
+        android:id="@+id/label_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:background="@color/white"
+        android:fontFamily="roboto"
+        android:gravity="center"
+        android:text="This is a game:"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/info_text"
+        tools:ignore="MissingConstraints" />
 
-    <!-- todo (07) Сделать 3 кнопки с id=red_button, id=yellow_button, id=green_button, с высотой и длиной равной wrap_content, c шрифтом roboto, c текстами "RED", "YELLOW", "GREEN" соответственно, c горизонтальным смещением в 50%. И сделать так, чтобы они все были снизу с отступом в 16dp, и привязаны друг к другу. -->
+    <TextView
+        android:id="@+id/info_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="roboto"
+        android:text="Tap the screen and buttons"
+        app:layout_goneMarginTop="@dimen/margin_half"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/label_text"
+        app:layout_constraintTop_toBottomOf="@id/box_two_text"
+        app:layout_constraintVertical_bias="0.12"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_goneMarginBottom="@dimen/margin_half" />
+
+    <Button
+        android:id="@+id/red_button"
+        android:fontFamily="@font/roboto"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RED"
+        app:layout_constraintBaseline_toBaselineOf="@+id/yellow_button"
+        app:layout_constraintEnd_toStartOf="@+id/yellow_button"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <Button
+        android:id="@+id/yellow_button"
+        android:fontFamily="@font/roboto"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="YELLOW"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/green_button"
+        app:layout_constraintStart_toEndOf="@+id/red_button"
+        app:layout_constraintTop_toBottomOf="@+id/label_text"
+        app:layout_MarginTop="@dimen/margin_half"
+        app:layout_MarginBottom="@dimen/margin_wide"
+        />
+
+    <Button
+        android:id="@+id/green_button"
+        android:fontFamily="@font/roboto"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GREEN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/yellow_button"
+        app:layout_constraintBaseline_toBaselineOf="@id/yellow_button"
+        />
 
 </android.support.constraint.ConstraintLayout>
