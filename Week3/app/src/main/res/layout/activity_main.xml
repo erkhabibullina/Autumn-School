@@ -9,19 +9,6 @@
     android:background="#386E75"
     tools:context=".MainActivity">
 
-    <!-- todo (01) сделать папку font, и добавить туда шрифт roboto -->
-
-    <!-- todo (02) сделать TextView с id=box_one_text, чтобы она занимала всю длину, и чтобы высота у нее была wrap_content, с отступами сверху/слева/справа по 16dp, на ней был текст "Box one", чтобы у нее был белый бэкграунд и белый цвет текста, размер текста 24sp, шрифт был roboto, сделать его "жирным", и чтобы текст был по центру. Текст должен быть "Box one". -->
-
-    <!-- todo (03) сделать TextView с id=box_two_text, с белым бэкграундом и белым цветом текста, с размером текста равным 24sp, сделать его жирным и применить шрифт roboto, и чтобы текст был по центру. Так же у него должен быть квадратный вид со стороной в 130dp, и с отступами сверху/слева/справа по 16dp, и чтобы он распологался точно под box_one_text TextView и точно над текстом с id=label_text, который мы добавим позже. Текст должен быть "Box two"-->
-
-    <!-- todo (04) сделать три TextView с id=box_three_text, id=box_four_text, id=box_five_text, с текстами соответсвенно Box Three, Box Four, Box Five, с белым бэкграундом и белым цветом текста, с размером текста равным 24sp, сделать их жирными и применить шрифт roboto, и чтобы текст был по центру. Так же они должны занимать всю длину, а высота wrap_content, с отступами слева и справа по 16dp. Они должны иметь одинаковую длину, и располагаться друг под другом, и низ самой нижней должен быть на одном уровне с низом box_two_text, а верх верхнего так же с верхом box_two_text.  -->
-
-    <!-- todo (05) Сделать TextView с id=label_text, у которой длина и высота будут wrap_content, отступ слева 16dp, шрифт - робото, размер текста - 24sp, чтоб он был жирным, и чтобы у нее была привязка к низу вьюшки с id=info_text. С текстом "This is a game:" -->
-
-    <!-- todo (06) Сделать TextView с id=info_text. С высотой и шириной wrap_content, с отступами слева/сверху/снизу/справа равными 16/8/8/16 dp соответсвенно. Шрифт - roboto, текст - "Tap the screen and buttons". Его низ должен быть привязан к низу родителя, правый конец к правому концу родителя, левый конец к правому концу label_text, верх к низу box_two_text, вертикальное смещение - 12%, горизонтальное смещение - 100%  -->
-
-    <!-- todo (07) Сделать 3 кнопки с id=red_button, id=yellow_button, id=green_button, с высотой и длиной равной wrap_content, c шрифтом roboto, c текстами "RED", "YELLOW", "GREEN" соответственно, c горизонтальным смещением в 50%. И сделать так, чтобы они все были снизу с отступом в 16dp, и привязаны друг к другу. -->
 
     <TextView
         android:id="@+id/box_one_text"
@@ -133,7 +120,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintVertical_bias="0.12"
         app:layout_constraintTop_toBottomOf="@id/box_two_text" />
-    <!-- todo (07) Сделать 3 кнопки с id=red_button, id=yellow_button, id=green_button, с высотой и длиной равной wrap_content, c шрифтом roboto, c текстами "RED", "YELLOW", "GREEN" соответственно, c горизонтальным смещением в 50%. И сделать так, чтобы они все были снизу с отступом в 16dp, и привязаны друг к другу. -->
+
     <Button
         android:id="@+id/red_button"
         android:layout_width="wrap_content"
@@ -142,7 +129,6 @@
         android:layout_marginBottom="@dimen/Bottom"
         android:layout_marginStart="@dimen/margin_wide"
         android:layout_marginEnd="@dimen/margin_wide"
-        android:background="#B62424"
         android:fontFamily="@font/roboto"
         android:text="@string/button_red"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -159,7 +145,6 @@
         android:layout_marginEnd="@dimen/margin_wide"
         android:layout_marginBottom="@dimen/Bottom"
         android:layout_marginStart="@dimen/margin_wide"
-        android:backgroundTint="#FFC107"
         android:fontFamily="@font/roboto"
         android:text="@string/button_yellow"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -178,7 +163,6 @@
         android:layout_marginTop="@dimen/Top"
         android:layout_marginEnd="@dimen/margin_wide"
         android:layout_marginBottom="@dimen/Bottom"
-        android:backgroundTint="#31BD37"
         android:fontFamily="@font/roboto"
         android:text="@string/button_yellow"
         app:layout_constraintBottom_toBottomOf="parent"
