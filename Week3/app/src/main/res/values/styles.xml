@@ -17,4 +17,16 @@
         <item name="android:fontFamily">@font/roboto</item>
     </style>
 
+    <style name="threeTexts">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginHorizontal">@dimen/margin_wide</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:textSize">@dimen/box_text_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
 </resources>
