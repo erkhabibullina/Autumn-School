@@ -3,6 +3,7 @@ package com.example.android.dessertpusher
 
 import android.content.ActivityNotFoundException
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
@@ -15,6 +16,9 @@ import timber.log.Timber
 
 /** onSaveInstanceState Bundle Keys **/
 // todo (11) создать ключи доступа для бандлов данных
+
+const val KEY_REVENUE : String = "KEY REVENUE"
+const val KEY_DESSERT_SOLD : String = "KEY DESSERT SOLD"
 
 class MainActivity : AppCompatActivity(), LifecycleObserver {
 
@@ -54,7 +58,7 @@ class MainActivity : AppCompatActivity(), LifecycleObserver {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Timber.i("onCreate Called")
+       //Timber.i("onCreate Called")
 
         // Use Data Binding to get reference to the views
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
@@ -65,8 +69,15 @@ class MainActivity : AppCompatActivity(), LifecycleObserver {
 
         // todo (09) присвоить dessertTimer инстанс DessertTimer, указав в параметрах лайфсайкл
 
+        dessertTimer = DessertTimer(this.lifecycle)
 
         // todo (12) Проверить если есть savedInstanceState, тогда забрать оттуда данные
+
+        if (savedInstanceState != null) {
+            revenue = savedInstanceState.getInt("$KEY_REVENUE", 0)
+            dessertsSold = savedInstanceState.getInt("$KEY_DESSERT_SOLD", 0)
+
+        }
 
         binding.revenue = revenue
         binding.amountSold = dessertsSold
@@ -133,12 +144,41 @@ class MainActivity : AppCompatActivity(), LifecycleObserver {
         return super.onOptionsItemSelected(item)
     }
 
-    /**
-     * Called when the user navigates away from the app but might come back
-     */
-    // todo (10) оверрайднуть onSaveInstanceState для того, чтобы сохранять данные в кэш
-    // todo  если приложение стопается, и onRestoreInstanceState, чтобы получать эти данные
+    override fun onSaveInstanceState(outState: Bundle) {
+        outState.putInt("$KEY_REVENUE", revenue)
+        outState.putInt("$KEY_DESSERT_SOLD", dessertsSold)
+        super.onSaveInstanceState(outState)
+    }
 
-    /** Lifecycle Methods **/
-    // todo (04) написать все лайфсайкл колбеки
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        Timber.i("onSaveInstanceState called")
+    }
+
+    override fun onStart() {
+        super.onStart()
+        //dessertTimer.startTimer()
+        Timber.i( "OnStart Called")
+    }
+
+    override fun onResume() {
+        super.onResume()
+    }
+
+    override fun onPause() {
+        super.onPause()
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+    }
+
+    override fun onStop() {
+        dessertTimer.stopTimer()
+        super.onStop()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+    }
 }
