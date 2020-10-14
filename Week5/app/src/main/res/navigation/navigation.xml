@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2018, The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_root"
+    app:startDestination="@+id/titleFragment">
+    <!-- todo создать фрагмент titleFragment, у которого будет путь к gameFragment с входными/выходными
+    todo анимациями slide_in_right/slide_out_left и popEnterAnim/popExitAnim равными slide_in_left/slide_out_right    -->
+    <fragment
+        android:id="@+id/titleFragment"
+        android:name="com.example.android.navigation.TitleFragment"
+        android:label="@string/android_trivia"
+        tools:layout="@layout/fragment_title">
+        <action
+            android:id="@+id/action_titleFragment_to_gameFragment"
+            app:destination="@id/gameFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <!-- todo создать фрагмент gameFragment, у которого будет путь к gameOverFragment и gameWonFragment.
+        todo у action gameOverFragment должна быть enterAnim/exitAnim = fade_in/fade_out
+        todo popEnterAnim/popExitAnim = slide_in_left/slide_out_right
+        todo popUpTo/popUpToInclusive = gameFragment/true
+        todo у action gameWonFragment должна быть enterAnim/exitAnim = slide_in_left/slide_out_right
+        todo popEnterAnim/popExitAnim = slide_in_right/slide_out_left
+        todo popUpTo/popUpToInclusive = gameFragment/true-->
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.example.android.navigation.GameFragment"
+        android:label="@string/android_trivia"
+        tools:layout="@layout/fragment_game">
+        <action
+            android:id="@+id/action_gameFragment_to_gameOverFragment"
+            app:destination="@id/gameOverFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@+id/gameFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_gameFragment_to_gameWonFragment"
+            app:destination="@id/gameWonFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@+id/gameFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!-- todo создать фрагмент gameWonFragment, у которого будут два аргумента numQuestions,
+     todo и numCorrect типа integer, и который будет направлен на gameFragment с enterAnim/exitAnim
+     todo = slide_in_right/slide_out_left, popEnterAnim/popExitAnim/popUpTo =slide_in_left/slide_out_right/titleFragment  -->
+    <fragment
+        android:id="@+id/gameWonFragment"
+        android:name="com.example.android.navigation.GameWonFragment"
+        android:label="@string/android_trivia"
+        tools:layout="@layout/fragment_game_won">
+        <argument
+            android:name="numQuestions"
+            app:argType="integer" />
+        <argument
+            android:name="numCorrect"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_gameWonFragment_to_gameFragment"
+            app:destination="@id/gameFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@+id/titleFragment"/>
+    </fragment>
+    <!-- todo создать фрагмент gameOverFragment, который направлен на gameFragment и enterAnim/exitAnim
+      todo = slide_in_left/slide_out_right, popEnterAnim/popExitAnim/popUpTo = slide_in_left/slide_out_right/titleFragment -->
+    <fragment
+        android:id="@+id/gameOverFragment"
+        android:name="com.example.android.navigation.GameOverFragment"
+        android:label="@string/android_trivia"
+        tools:layout="@layout/fragment_game_over">
+        <action
+            android:id="@+id/action_gameOverFragment_to_gameFragment"
+            app:destination="@id/gameFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@+id/titleFragment" />
+    </fragment>
+    <!-- todo создать rulesFragment-->
+    <fragment
+        android:id="@+id/rulesFragment"
+        android:name="com.example.android.navigation.RulesFragment"
+        android:label="@string/title_trivia_rules"
+        tools:layout="@layout/fragment_rules" />
+    <!-- todo создать aboutFragment-->
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.android.navigation.AboutFragment"
+        android:label="@string/title_about_trivia"
+        tools:layout="@layout/fragment_about" />
+</navigation>
