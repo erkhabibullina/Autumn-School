@@ -15,7 +15,8 @@ import timber.log.Timber
 
 /** onSaveInstanceState Bundle Keys **/
 // todo (11) создать ключи доступа для бандлов данных
-
+const val KEY_REVENUE = "KEY REVENUE"
+const val KEY_DESSERTSOLD = "KEY DESSERT SOLD"
 class MainActivity : AppCompatActivity(), LifecycleObserver {
 
     private var revenue = 0
@@ -64,10 +65,13 @@ class MainActivity : AppCompatActivity(), LifecycleObserver {
         }
 
         // todo (09) присвоить dessertTimer инстанс DessertTimer, указав в параметрах лайфсайкл
-
+        dessertTimer = DessertTimer(lifecycle)
 
         // todo (12) Проверить если есть savedInstanceState, тогда забрать оттуда данные
-
+        if (savedInstanceState != null) {
+            revenue = savedInstanceState.getInt(KEY_REVENUE,0)
+            dessertsSold =savedInstanceState.getInt(KEY_DESSERTSOLD,0)
+        }
         binding.revenue = revenue
         binding.amountSold = dessertsSold
 
@@ -133,12 +137,43 @@ class MainActivity : AppCompatActivity(), LifecycleObserver {
         return super.onOptionsItemSelected(item)
     }
 
-    /**
-     * Called when the user navigates away from the app but might come back
-     */
-    // todo (10) оверрайднуть onSaveInstanceState для того, чтобы сохранять данные в кэш
-    // todo  если приложение стопается, и onRestoreInstanceState, чтобы получать эти данные
-
+    override fun onSaveInstanceState(outState: Bundle) {
+        outState.putInt(KEY_REVENUE,revenue)
+        outState.putInt(KEY_DESSERTSOLD,dessertsSold)
+        super.onSaveInstanceState(outState)
+    }
     /** Lifecycle Methods **/
     // todo (04) написать все лайфсайкл колбеки
+    override fun onStart() {
+        super.onStart()
+//        dessertTimer.startTimer()
+        Timber.i("onStart Called")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Timber.i("onPause Called")
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        Timber.i("onResume Called")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Timber.i("onRestart Called")
+    }
+
+    override fun onStop() {
+        super.onStop()
+//        dessertTimer.stopTimer()
+        Timber.i("onStop Called")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Timber.i("onDestroy Called")
+    }
 }
