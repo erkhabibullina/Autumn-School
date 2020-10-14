@@ -42,48 +42,20 @@ class GameWonFragment : Fragment() {
         // Inflate the layout for this fragment
         val binding: FragmentGameWonBinding = DataBindingUtil.inflate(
                 inflater, R.layout.fragment_game_won, container, false)
-        // todo сделать так, чтобы при нажатии на nextMatchButton мы бы перешли на GameFragment
-        binding.nextMatchButton.setOnClickListener { view: View ->
-            view.findNavController().navigate(
-                    GameWonFragmentDirections.actionGameWonFragmentToGameFragment())
-        }
-        // todo поставить true у setHasOptionsMenu
+        // todo (17) сделать так, чтобы при нажатии на nextMatchButton мы бы перешли на GameFragment
+
+        // todo (18) поставить true у setHasOptionsMenu
         return binding.root
     }
 
-    // todo написать метод getShareIntent, который вернет share intent с
+    // todo (19)написать метод getShareIntent, который вернет share intent с
     // todo текстом R.string.share_success_text и аргументами numCorrect и NumQuestions
-    private fun getShareIntent() : Intent {
-        val args = GameWonFragmentArgs.fromBundle(requireArguments())
-        return ShareCompat.IntentBuilder.from(activity!!)
-                .setText(getString(R.string.share_success_text, args.numCorrect, args.numQuestions))
-                .setType("text/plain")
-                .intent
-    }
 
-    // todo написать метод shareSuccess(), который запустит активити с аргументом getShareIntent
-    private fun shareSuccess() {
-        startActivity(getShareIntent())
-    }
+    // todo (20) написать метод shareSuccess(), который запустит активити с аргументом getShareIntent
 
-    // todo переписать onCreateOptionsMenu, в котором мы будем инфлейтить меню и проверять, находимся
+    // todo (21) переписать onCreateOptionsMenu, в котором мы будем инфлейтить меню и проверять, находимся
     // todo мы на экране активити или нет, и если нет, то прятать значки меню
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        super.onCreateOptionsMenu(menu, inflater)
-        inflater.inflate(R.menu.winner_menu, menu)
-        // check if the activity resolves
-        if (null == getShareIntent().resolveActivity(requireActivity().packageManager)) {
-            // hide the menu item if it doesn't resolve
-            menu.findItem(R.id.share)?.isVisible = false
-        }
-    }
 
-    // todo переписать onOptionsItemSelected, который будет проверять все item.itemId, и если он равен R.id.share,
+    // todo (22) переписать onOptionsItemSelected, который будет проверять все item.itemId, и если он равен R.id.share,
     // todo то вызывать метод shareSuccess()
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.share -> shareSuccess()
-        }
-        return super.onOptionsItemSelected(item)
-    }
 }

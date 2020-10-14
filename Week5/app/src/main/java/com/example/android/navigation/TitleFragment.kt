@@ -35,24 +35,13 @@ class TitleFragment : Fragment() {
                               savedInstanceState: Bundle?): View? {
         val binding: FragmentTitleBinding = DataBindingUtil.inflate(
                 inflater, R.layout.fragment_title, container, false)
-        // todo сделать так, чтобы при нажатии на playButton мы бы перешли на GameFragment
-        binding.playButton.setOnClickListener { v: View ->
-            v.findNavController().navigate(TitleFragmentDirections.actionTitleFragmentToGameFragment())
-        }
-        // todo поставить true у setHasOptionsMenu
-        setHasOptionsMenu(true)
+        // todo (13) сделать так, чтобы при нажатии на playButton мы бы перешли на GameFragment
+
+        // todo (14) поставить true у setHasOptionsMenu
         return binding.root
     }
 
-    // todo переписать onCreateOptionsMenu, и там заинфлейтить overflow_menu
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        super.onCreateOptionsMenu(menu, inflater)
-        inflater.inflate(R.menu.overflow_menu, menu)
-    }
+    // todo (15) переписать onCreateOptionsMenu, и там заинфлейтить overflow_menu
 
-    // todo переписать onOptionsItemSelected и ретернуть NavigationUI.onNavDestinationSelected
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return NavigationUI.onNavDestinationSelected(item, requireView().findNavController())
-                || super.onOptionsItemSelected(item)
-    }
+    // todo (16) переписать onOptionsItemSelected и ретернуть NavigationUI.onNavDestinationSelected
 }

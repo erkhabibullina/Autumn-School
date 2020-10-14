@@ -96,12 +96,10 @@ class GameFragment : Fragment() {
                         setQuestion()
                         binding.invalidateAll()
                     } else {
-                        // todo сделать навигацию в GameWonFragment и передать туда два safe-args numQuestions и questionIndex
-                        view.findNavController().navigate(GameFragmentDirections.actionGameFragmentToGameWonFragment(numQuestions,questionIndex))
+                        // todo (24) сделать навигацию в GameWonFragment и передать туда два safe-args numQuestions и questionIndex
                     }
                 } else {
-                    // todo сделать навигацию в GameOverFragment
-                    view.findNavController().navigate(GameFragmentDirections.actionGameFragmentToGameOverFragment())
+                    // todo (25) сделать навигацию в GameOverFragment
                 }
             }
         }

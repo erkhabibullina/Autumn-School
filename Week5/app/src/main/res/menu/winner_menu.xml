@@ -2,13 +2,6 @@
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- todo создать айтем с id=share, enabled=true, icon = @drawable/share,
+    <!-- todo (09) создать айтем с id=share, enabled=true, icon = @drawable/share,
      todo title = Share, visible = true, showAsAction=ifRoom-->
-    <item
-        android:id="@+id/share"
-        android:enabled="true"
-        android:icon="@drawable/share"
-        android:title="@string/share"
-        android:visible="true"
-        app:showAsAction="ifRoom" />
 </menu>
