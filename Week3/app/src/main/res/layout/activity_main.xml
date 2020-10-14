@@ -22,4 +22,157 @@
 
     <!-- todo (07) Сделать 3 кнопки с id=red_button, id=yellow_button, id=green_button, с высотой и длиной равной wrap_content, c шрифтом roboto, c текстами "RED", "YELLOW", "GREEN" соответственно, c горизонтальным смещением в 50%. И сделать так, чтобы они все были снизу с отступом в 16dp, и привязаны друг к другу. -->
 
+
+    <TextView
+        android:id="@+id/box_one_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="#FFFFFF"
+        android:fontFamily="@font/roboto"
+        android:gravity="center"
+        android:text="@string/box_one"
+        android:textColor="#FFFFFF"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/box_two_text"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="#FFFFFF"
+        android:fontFamily="@font/roboto"
+        android:gravity="center"
+        android:text="@string/box_two"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/box_one_text" />
+
+    <TextView
+        android:id="@+id/box_three_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/box_three"
+        style="@style/whiteBox"
+        app:layout_constraintBottom_toTopOf="@id/box_four_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/box_two_text"
+        app:layout_constraintTop_toTopOf="@id/box_two_text"
+        android:layout_marginStart="@dimen/margin_wide"
+        android:layout_marginEnd="@dimen/margin_wide"
+       />
+
+    <TextView
+        android:id="@+id/box_four_text"
+        style="@style/whiteBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/margin_wide"
+        android:layout_marginEnd="@dimen/margin_wide"
+        android:layout_marginBottom="@dimen/margin_wide"
+        android:text="@string/box_four"
+        app:layout_constraintBottom_toTopOf="@id/box_five_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/box_two_text"
+        app:layout_constraintTop_toBottomOf="@id/box_three_text"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <TextView
+        android:id="@+id/box_five_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/box_five"
+        style="@style/whiteBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/box_four_text"
+        android:layout_marginStart="@dimen/margin_wide"
+        android:layout_marginEnd="@dimen/margin_wide"
+        app:layout_constraintBottom_toBottomOf="@id/box_two_text"
+        app:layout_constraintStart_toEndOf="@id/box_two_text"
+        />
+
+    <TextView
+        android:id="@+id/label_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_wide"
+        android:fontFamily="@font/roboto"
+        android:text="@string/how_to_play"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@id/info_text"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/info_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tap_the_boxes_and_buttons"
+        android:layout_marginStart="@dimen/margin_wide"
+        android:layout_marginEnd="@dimen/margin_wide"
+        android:layout_marginTop="@dimen/margin_half"
+        android:layout_marginBottom="@dimen/margin_half"
+        android:fontFamily="@font/roboto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/label_text"
+        app:layout_constraintTop_toBottomOf="@id/box_two_text"
+        app:layout_constraintVertical_bias="0.12"
+        app:layout_constraintHorizontal_bias="1"
+        />
+
+    <Button
+        android:id="@+id/red_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBaseline_toBaselineOf="@id/yellow_button"
+        app:layout_constraintEnd_toStartOf="@id/yellow_button"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="RED"
+        android:fontFamily="@font/roboto"
+     />
+
+    <Button
+        android:id="@+id/yellow_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/green_button"
+        app:layout_constraintStart_toEndOf="@id/red_button"
+        app:layout_constraintTop_toBottomOf="@id/label_text"
+        android:layout_marginTop="@dimen/margin_half"
+        android:layout_marginBottom="@dimen/margin_wide"
+        android:text="YELLOW"
+        android:fontFamily="@font/roboto"
+       />
+
+    <Button
+        android:id="@+id/green_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/yellow_button"
+        app:layout_constraintBaseline_toBaselineOf="@id/yellow_button"
+        android:text="GREEN"
+        android:fontFamily="@font/roboto"
+ />
 </android.support.constraint.ConstraintLayout>
