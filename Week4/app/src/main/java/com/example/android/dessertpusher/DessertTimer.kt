@@ -14,7 +14,7 @@ import timber.log.Timber
  * -----
  *
  * Handler and Runnable are beyond the scope of this lesson. This is in part because they deal with
- * threading, which is a complex topic that will be covered in a later lesson.
+ * threading, which is a complex topic that will be covered in a later lesson.Lifecycle
  *
  * If you want to learn more now, you can take a look on the Android Developer documentation on
  * threading:
@@ -24,7 +24,7 @@ import timber.log.Timber
  */
 
 // todo (05) унаследовать LifecycleObserver, передать в параметры Lifecycle
-class DessertTimer {
+class DessertTimer(lifecycle: Lifecycle) : LifecycleObserver{
 
     var secondsCount = 0
 
@@ -37,8 +37,11 @@ class DessertTimer {
 
 
     // todo (06) добавить обсервер к нашему Lifecycle
-
+    init {
+        lifecycle.addObserver(this)
+    }
     // todo (07) используя lifecycle library сделать так, чтобы startTime запускался на OnStart
+    @OnLifecycleEvent(Lifecycle.Event.ON_START)
     fun startTimer() {
         // Create the runnable action, which prints out a log and increments the seconds counter
         runnable = Runnable {
@@ -57,6 +60,7 @@ class DessertTimer {
     }
 
     // todo (08) используя lifecycle library сделать так, чтобы startTime запускался на OnStop
+    @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
     fun stopTimer() {
         // Removes all pending posts of runnable from the handler's queue, effectively stopping the
         // timer
