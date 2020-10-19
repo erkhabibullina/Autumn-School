@@ -20,4 +20,14 @@
 
     <!-- todo (12) добавить айтем с id=aboutFragment, icon = @drawable/android, title = About -->
 
+    <item
+        android:title="@string/rules"
+        android:icon="@drawable/rules"
+        android:id="@+id/rulesFragment"
+        />
+    <item
+        android:title="@string/about"
+        android:id="@+id/aboutFragment"
+        android:icon="@drawable/android"
+        />
 </menu>
