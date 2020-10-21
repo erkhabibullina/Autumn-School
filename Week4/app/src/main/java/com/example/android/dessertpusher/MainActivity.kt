@@ -1,4 +1,3 @@
-
 package com.example.android.dessertpusher
 
 import android.content.ActivityNotFoundException
@@ -14,10 +13,10 @@ import com.example.android.dessertpusher.databinding.ActivityMainBinding
 import timber.log.Timber
 
 /** onSaveInstanceState Bundle Keys **/
-// todo (11) создать ключи доступа для бандлов данных
+const val KEY_REVENUE = "KEY_REVENUE"
+const val KEY_DESSERTSOLD = "KEY_DESSERTSOLD"
 
 class MainActivity : AppCompatActivity(), LifecycleObserver {
-
     private var revenue = 0
     private var dessertsSold = 0
     private lateinit var dessertTimer: DessertTimer
@@ -63,11 +62,12 @@ class MainActivity : AppCompatActivity(), LifecycleObserver {
             onDessertClicked()
         }
 
-        // todo (09) присвоить dessertTimer инстанс DessertTimer, указав в параметрах лайфсайкл
+        dessertTimer = DessertTimer(this.lifecycle)
 
-
-        // todo (12) Проверить если есть savedInstanceState, тогда забрать оттуда данные
-
+        if (savedInstanceState != null) {
+            revenue = savedInstanceState.getInt(KEY_REVENUE, 0)
+            dessertsSold = savedInstanceState.getInt(KEY_DESSERTSOLD, 0)
+        }
         binding.revenue = revenue
         binding.amountSold = dessertsSold
 
@@ -133,12 +133,49 @@ class MainActivity : AppCompatActivity(), LifecycleObserver {
         return super.onOptionsItemSelected(item)
     }
 
-    /**
-     * Called when the user navigates away from the app but might come back
-     */
-    // todo (10) оверрайднуть onSaveInstanceState для того, чтобы сохранять данные в кэш
-    // todo  если приложение стопается, и onRestoreInstanceState, чтобы получать эти данные
+    override fun onSaveInstanceState(outState: Bundle) {
+        outState.putInt(KEY_REVENUE, revenue)
+        outState.putInt(KEY_DESSERTSOLD, dessertsSold)
+        super.onSaveInstanceState(outState)
+    }
 
-    /** Lifecycle Methods **/
-    // todo (04) написать все лайфсайкл колбеки
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        Timber.i("onRestoreInstanceState called")
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Timber.i("onStart called")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Timber.i("onResume called")
+
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Timber.i("onPause called")
+
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Timber.i("onRestart called")
+
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Timber.i("onStop called")
+
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Timber.i("onDestroy called")
+
+    }
 }
