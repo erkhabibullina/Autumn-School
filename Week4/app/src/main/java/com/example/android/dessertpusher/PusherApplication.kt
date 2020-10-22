@@ -7,6 +7,6 @@ class PusherApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        // todo (02) подключить Timber на все приложение
+        Timber.plant(Timber.DebugTree())
     }
 }
