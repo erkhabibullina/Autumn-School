@@ -21,10 +21,14 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 
 // todo подключить плагин safeargs
+apply plugin: 'androidx.navigation.safeargs'
 
 android {
     compileSdkVersion 30
     // todo подключить dataBinding
+    buildFeatures {
+        dataBinding = true
+    }
     defaultConfig {
         applicationId 'com.example.android.navigation'
         minSdkVersion 19
