@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <set xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- todo (38) написать анимацию транслейта с атрибутами fromXDelta="-100%", fromYDelta="0%", toXDelta="0%", toYDelta="0%"
-     todo и с коротким временем исполнения-->
+    <translate
+        android:duration="@android:integer/config_shortAnimTime"
+        android:fromXDelta="-100%"
+        android:fromYDelta="0%"
+        android:toXDelta="0%"
+        android:toYDelta="0%" />
 </set>
