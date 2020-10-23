@@ -33,7 +33,7 @@ import androidx.navigation.findNavController
 import com.example.android.navigation.databinding.FragmentGameWonBinding
 import android.content.pm.ResolveInfo
 import android.content.pm.PackageManager
-
+import androidx.navigation.fragment.findNavController
 
 
 class GameWonFragment : Fragment() {
@@ -43,19 +43,42 @@ class GameWonFragment : Fragment() {
         val binding: FragmentGameWonBinding = DataBindingUtil.inflate(
                 inflater, R.layout.fragment_game_won, container, false)
         // todo (17) сделать так, чтобы при нажатии на nextMatchButton мы бы перешли на GameFragment
-
+        binding.nextMatchButton.setOnClickListener {
+            findNavController().navigate(R.id.action_gameWonFragment_to_gameFragment)
+        }
         // todo (18) поставить true у setHasOptionsMenu
+        setHasOptionsMenu(true)
         return binding.root
     }
 
     // todo (19)написать метод getShareIntent, который вернет share intent с
     // todo текстом R.string.share_success_text и аргументами numCorrect и NumQuestions
-
+    private fun getShareIntent() : Intent {
+        val args = GameWonFragmentArgs.fromBundle(requireArguments())
+        return ShareCompat.IntentBuilder.from(requireActivity())
+                .setText(getString(R.string.share_success_text, args.numQuestions, args.numCorrect))
+                .setType("text/plain")
+                .intent
+    }
     // todo (20) написать метод shareSuccess(), который запустит активити с аргументом getShareIntent
-
+    private fun shareSuccess() {
+        startActivity(getShareIntent())
+    }
     // todo (21) переписать onCreateOptionsMenu, в котором мы будем инфлейтить меню и проверять, находимся
     // todo мы на экране активити или нет, и если нет, то прятать значки меню
-
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.winner_menu, menu)
+        if (getShareIntent().resolveActivity(requireActivity().packageManager) == null) {
+            menu.findItem(R.id.share).isVisible = false
+        }
+    }
     // todo (22) переписать onOptionsItemSelected, который будет проверять все item.itemId, и если он равен R.id.share,
     // todo то вызывать метод shareSuccess()
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId) {
+            R.id.share -> shareSuccess()
+        }
+        return super.onOptionsItemSelected(item)
+    }
 }
