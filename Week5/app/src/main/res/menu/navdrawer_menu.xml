@@ -18,6 +18,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- todo (11) добавить айтем с id=rulesFragment, icon = @drawable/rules, title = Rules -->
 
+    <item
+        android:id="@+id/rulesFragment"
+        android:icon="@drawable/rules"
+        android:title="@string/rules"
+        />
     <!-- todo (12) добавить айтем с id=aboutFragment, icon = @drawable/android, title = About -->
-
+    <item
+        android:id="@+id/aboutFragment"
+        android:icon="@drawable/android"
+        android:title="@string/about"
+        />
 </menu>
