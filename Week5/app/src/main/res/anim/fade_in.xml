@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <set xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- todo (37) написать анимацию с fromAlpha="0.0" на toAlpha="1.0" со средним временем-->
+    <alpha
+        android:duration="@android:integer/config_mediumAnimTime"
+        android:fromAlpha="0.0"
+        android:toAlpha="1.0"/>
 </set>

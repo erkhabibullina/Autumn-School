@@ -3,5 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- todo (10) добавить item c id = aboutFragment, и title = About -->
-
+    <item
+        android:title="@string/about"
+        android:id="@+id/aboutFragment"
+        />
 </menu>
