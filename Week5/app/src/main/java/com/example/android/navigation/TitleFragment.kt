@@ -27,6 +27,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.example.android.navigation.databinding.FragmentTitleBinding
 
@@ -36,12 +37,23 @@ class TitleFragment : Fragment() {
         val binding: FragmentTitleBinding = DataBindingUtil.inflate(
                 inflater, R.layout.fragment_title, container, false)
         // todo (13) сделать так, чтобы при нажатии на playButton мы бы перешли на GameFragment
-
+        binding.playButton.setOnClickListener{
+            findNavController().navigate(R.id.gameFragment)
+        }
         // todo (14) поставить true у setHasOptionsMenu
+        setHasOptionsMenu(true)
         return binding.root
     }
 
     // todo (15) переписать onCreateOptionsMenu, и там заинфлейтить overflow_menu
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.overflow_menu,menu)
+    }
 
     // todo (16) переписать onOptionsItemSelected и ретернуть NavigationUI.onNavDestinationSelected
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return NavigationUI.onNavDestinationSelected(item,requireView().findNavController()) ||
+                super.onOptionsItemSelected(item)
+    }
 }

@@ -18,6 +18,7 @@ package com.example.android.navigation
 
 import androidx.databinding.DataBindingUtil
 import android.os.Bundle
+import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
@@ -29,18 +30,29 @@ import com.example.android.navigation.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     // todo (29) сделать отложенную переменную drawerLayout, которая экстендид DrawerLayout
+    private lateinit var drawerLayout: DrawerLayout
     private lateinit var appBarConfiguration : AppBarConfiguration
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
         // todo (30) присвоить переменной drawerLayout - binding.drawerLayout
+        drawerLayout = binding.drawerLayout
         // todo (31) сделать переменную navController, которая будет равна this.findNavController(R.id.myNavHostFragment)
+        val navController = this.findNavController(R.id.myNavHostFragment)
         // todo (32) с помощью NavigationUI засетапить экшн бар
+        NavigationUI.setupActionBarWithNavController(this,navController,drawerLayout)
         // todo (33) инициализировать appBarConfiguration с помощью AppBarConfiguration
-        // todo (34) предотвратить возможность свайпа навдровера не со старт дестинейшна
+        appBarConfiguration = AppBarConfiguration(navController.graph,drawerLayout)
+
+
         // todo (35) с помощью NavigationUI засетапить нав контроллер
+        NavigationUI.setupWithNavController(binding.navView,navController)
     }
 
     // todo (36) переписать onSupportNavigateUp, где инициализировать заново навконтроллер и ретернуть
     // todo NavigationUI.navigateUp
+    override fun onSupportNavigateUp(): Boolean {
+        val navController = this.findNavController(R.id.myNavHostFragment)
+        return NavigationUI.navigateUp(navController,appBarConfiguration)
+    }
 }
