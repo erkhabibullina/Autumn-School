@@ -24,6 +24,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.example.android.navigation.databinding.FragmentGameBinding
 
 class GameFragment : Fragment() {
@@ -96,9 +97,11 @@ class GameFragment : Fragment() {
                         setQuestion()
                         binding.invalidateAll()
                     } else {
+                        findNavController().navigate(GameFragmentDirections.actionGameFragmentToGameWonFragment(numQuestions, questionIndex))
                         // todo (24) сделать навигацию в GameWonFragment и передать туда два safe-args numQuestions и questionIndex
                     }
                 } else {
+                    findNavController().navigate(GameFragmentDirections.actionGameFragmentToGameOverFragment())
                     // todo (25) сделать навигацию в GameOverFragment
                 }
             }

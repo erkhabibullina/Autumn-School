@@ -18,6 +18,7 @@ package com.example.android.navigation
 
 import androidx.databinding.DataBindingUtil
 import android.os.Bundle
+import android.os.strictmode.NetworkViolation
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
@@ -29,10 +30,18 @@ import com.example.android.navigation.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     // todo (29) сделать отложенную переменную drawerLayout, которая экстендид DrawerLayout
+    private lateinit var drawerLayout: DrawerLayout
+
     private lateinit var appBarConfiguration : AppBarConfiguration
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
+        drawerLayout = binding.drawerLayout
+        val navController = this.findNavController(R.id.myNavHostFragment)
+        NavigationUI.setupActionBarWithNavController(this, navController, drawerLayout)
+        appBarConfiguration = AppBarConfiguration(navController.graph)
+        NavigationUI.setupWithNavController(binding.navView, navController)
+
         // todo (30) присвоить переменной drawerLayout - binding.drawerLayout
         // todo (31) сделать переменную navController, которая будет равна this.findNavController(R.id.myNavHostFragment)
         // todo (32) с помощью NavigationUI засетапить экшн бар
@@ -41,6 +50,10 @@ class MainActivity : AppCompatActivity() {
         // todo (35) с помощью NavigationUI засетапить нав контроллер
     }
 
-    // todo (36) переписать onSupportNavigateUp, где инициализировать заново навконтроллер и ретернуть
+    override fun onSupportNavigateUp(): Boolean {
+        val navController = this.findNavController(R.id.myNavHostFragment)
+        return NavigationUI.navigateUp(navController, appBarConfiguration)
+    }
+// todo (36) переписать onSupportNavigateUp, где инициализировать заново навконтроллер и ретернуть
     // todo NavigationUI.navigateUp
 }
